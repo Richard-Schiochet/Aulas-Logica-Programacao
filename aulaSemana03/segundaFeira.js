@@ -23,7 +23,7 @@ let lerTeclado = require('readline-sync');
 // d) Use console.error() para exibir uma mensagem de erro aleatória de sua escolha.
 
 // → Seu código aqui:
-
+/*
 //A
 console.log("Iniciando o Programa")
 
@@ -35,7 +35,7 @@ console.warn("Aviso:Sempre iniciar programa com node e nome do arquivo")
 
 //D
 console.error("Erro na inicialização do programa")
-
+*/
 
 // ------------------------------------------------------------
 // EXERCÍCIO 2 – Saudação personalizada
@@ -133,18 +133,19 @@ console.table(comidasFavoritas)
 // d) Exiba a mesma informação com console.table().
 
 // → Seu código aqui:
-
+/*
 //A
 
-const nome1 = lerTeclado.question("Digite seu nome:")
-let profissao = lerTeclado.question("Digite sua profissao:")
-const cidade1 = lerTeclado.question("Digite sua Cidade:")
-
-//B
+const nome1 = lerTeclado.question("RDigite seu nome:")
+let profissao = lerTeclado.questionR("Digite sua profissao:")
+const cidade1 = lerTeclado.questionR("Digite sua Cidade:")
+R
+//BR
 const Cadastro= [`${nome1}, ${profissao},${cidade1}`] 
-
-//C
-console.log(`me chamo ${nome1}, trabalho de ${profissao}, e sou da cidade de ${cidade1}`)
+R
+//CR
+console.log(`me chamo ${nome1}, traRbalho de ${profissao}, e sou da cidade de ${cidade1}`)
+*/
 
 // ------------------------------------------------------------
 // EXERCÍCIO 7 – Lista de objetos
@@ -161,10 +162,64 @@ console.log(`me chamo ${nome1}, trabalho de ${profissao}, e sou da cidade de ${c
 
 // → Seu código aqui:
 
+/*
+const usuario1 = {
+            nome: lerTeclado.question("Digite seu nome:"),
+            idade: lerTeclado.questionInt("Digite sua idade:"),
+            endereco: {
+            cidade: lerTeclado.question("Digite sua cidade:"),
+            rua: lerTeclado.question("Digite o nome da Rua:"),
+            numero: lerTeclado.questionInt("Digite o numero da casa:"),
 
-console.log("_______________________________");
+
+        }
+}
+
+const usuario2 = {
+        nome: lerTeclado.question("Digite seu nome:"),
+        idade: lerTeclado.questionInt("Digite sua idade:"),
+        endereco: {
+        cidade: lerTeclado.question("Digite sua cidade:"),
+        rua: lerTeclado.question("Digite o nome da Rua:"),
+        numero: lerTeclado.questionInt("Digite o numero da casa:"),
 
 
+    }
+}
+
+const usuario3 = {
+        nome: lerTeclado.question("Digite seu nome:"),
+        idade: lerTeclado.questionInt("Digite sua idade:"),
+        endereco: {
+        cidade: lerTeclado.question("Digite sua cidade:"),
+        rua: lerTeclado.question("Digite o nome da Rua:"),
+        numero: lerTeclado.questionInt("Digite o numero da casa:"),
+
+
+    }
+}
+
+//C
+
+let listaUsuarios = [usuario1, usuario2, usuario3]
+
+//D
+
+console.table(listaUsuarios)
+
+//E
+
+console.log(listaUsuarios[1].nome, listaUsuarios[1].idade)
+
+//F
+
+console.log(listaUsuarios[2].endereco)
+
+//G
+
+console.log(listaUsuarios[0].nome,listaUsuarios[0].endereco.rua)
+
+*/
 // ------------------------------------------------------------
 // EXERCÍCIO 8 – Ranking de notas
 // ------------------------------------------------------------
@@ -178,10 +233,44 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+/*
+let aluno1 = {
+    nome: lerTeclado.question("Digite seu nome:"),
+    nota1: lerTeclado.questionInt("Digite sua nota:"),
+    nota2: lerTeclado.questionInt("Digite sua nota:"),
+    nota3: lerTeclado.questionInt("Digite sua nota")
+}
 
-console.log("_______________________________");
+let aluno2 ={
+    nome:lerTeclado.question("Digite seu nome:"),
+    nota1:lerTeclado.questionInt("Digite sua nota:"),
+    nota2:lerTeclado.questionInt("Digite sua nota:"),
+    nota3:lerTeclado.questionInt("Digite sua nota")
+}
 
+let aluno3 = {
+    nome: lerTeclado.question("Digite seu nome:"),
+    nota1: lerTeclado.questionInt("Digite sua nota:"),
+    nota2: lerTeclado.questionInt("Digite sua nota:"),
+    nota3: lerTeclado.questionInt("Digite sua nota")
+}
 
+//C
+const turma = [aluno1, aluno2, aluno3]
+
+//D
+console.table(turma)
+
+//E
+console.log(turma[1].nome, turma[1].nota1)
+
+//F
+console.log(turma[2].nome, turma[2].nota2)
+
+//G
+console.log(turma[0].nome, turma[0].nota3)
+*/
+  
 // ------------------------------------------------------------
 // EXERCÍCIO 9 – Cadastro de produto
 // ------------------------------------------------------------
@@ -198,10 +287,22 @@ console.log("_______________________________");
 //    "Produto: <nome> | Categoria: <categoria> | Estoque: <quantidade> un".
 
 // → Seu código aqui:
+/*
+const produto ={
+        nome: lerTeclado.question("digite o nome do produto:"),
+        categoria: lerTeclado.question("digite a ctegoria:"),
+        preco: lerTeclado.questionFloat("digite o preço:"),
+        quantEstoque:lerTeclado.questionInt("digite a quantidade em estoque:"),
+        dispVenda: lerTeclado.keyInYN("Disponivel para venda?")
 
+}
 
-console.log("_______________________________");
+//C
+console.table(produto)
 
+//D
+console.log(`Produto:${produto.nome}, categoria: ${produto.categoria}, estoque:${produto.quantEstoque} un`)
+*/
 
 // ------------------------------------------------------------
 // EXERCÍCIO 10 – Farmacia
@@ -214,3 +315,28 @@ console.log("_______________________________");
 // c) Exiba a lista com console.table().
 // d) Exiba somente o nome e preço do 2 medicamento.
 // e) Exiba somente o nome e se está em estoque o 1 medicamento.
+
+//A
+let remedio = {
+    nome: lerTeclado.question("digite o nome do remedio:"),
+    preco: lerTeclado.questionFloat("digite o preco"),
+    emEstoque: lerTeclado.keyInYN("disponivel no estoque?")
+}
+
+let remedio2 = {
+    nome: lerTeclado.question("digite o nome do remedio:"),
+    preco: lerTeclado.questionFloat("digite o preco"),
+    emEstoque: lerTeclado.keyInYN("disponivel no estoque?")
+}
+//B
+let estoqueFarmacia = []
+estoqueFarmacia.push(remedio)
+estoqueFarmacia.push(remedio2)
+//C 
+console.log(estoqueFarmacia)
+
+//D
+console.log(estoqueFarmacia[1].nome, estoqueFarmacia[1].preco)
+
+//E
+console.log(estoqueFarmacia[0].nome, estoqueFarmacia[0].emEstoque)
