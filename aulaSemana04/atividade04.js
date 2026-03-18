@@ -257,9 +257,11 @@ let usuario1 =
 nota1 = lerTeclado.questionFloat("Digite nota")
 nota2 = lerTeclado.questionFloat("Digite 3 notas")
 nota3 = lerTeclado.questionFloat("Digite 3 notas")
+
 //B
-let notasUsuario = 
-nota1+nota2+nota3
+
+let notasUsuario = nota1+nota2+nota3
+console.log(notasUsuario)
 
 console.log("_______________________________");
 
