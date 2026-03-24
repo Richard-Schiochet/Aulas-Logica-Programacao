@@ -1,0 +1,449 @@
+// ============================================================
+//   ATIVIDADE 06 – Operadores Lógicos em JavaScript
+// ============================================================
+// Instruções: resolva cada exercício no espaço indicado.
+// Use console.log() para exibir os resultados.
+// Lembre-se de instalar o pacote antes de executar:
+//     npm install readline-sync
+// Para executar:
+//     node atividade-06.js
+//
+// Dica: Ao terminar um exercício, comente-o. Assim os dados
+//       não serão solicitados novamente.
+// ============================================================
+
+let lerTeclado = require('readline-sync');
+
+// ------------------------------------------------------------
+// EXERCÍCIO 1 – Tabela verdade do &&
+// ------------------------------------------------------------
+// Para cada combinação abaixo, armazene o resultado em uma variável
+// e exiba com template literal no formato:
+//   "true && true → <resultado>"
+//
+// Combinações:
+//   a) true && true
+//   b) true && false
+//   c) false && true
+//   d) false && false
+
+// → Seu código aqui:
+/*
+//A
+
+console.log(true && true)
+
+//B
+
+console.log(true && false)
+
+//C
+
+console.log(false && true)
+
+//D
+
+console.log(false && false)
+*/
+
+console.log("_______________________________");
+
+
+// ------------------------------------------------------------
+// EXERCÍCIO 2 – Tabela verdade do ||
+// ------------------------------------------------------------
+// Para cada combinação abaixo, armazene o resultado em uma variável
+// e exiba com template literal no formato:
+//   "true || false → <resultado>"
+//
+// Combinações:
+//   a) true || true
+//   b) true || false
+//   c) false || true
+//   d) false || false
+
+// → Seu código aqui:
+/*
+//A
+
+console.log(true || true)
+
+//B
+
+console.log(true || false)
+
+//C
+
+console.log(false ||  true)
+
+//D
+
+console.log(false || false)
+*/
+
+console.log("_______________________________");
+
+
+// ------------------------------------------------------------
+// EXERCÍCIO 3 – Operador ! (NOT)
+// ------------------------------------------------------------
+// a) Declare "sistemaAtivo" com valor true.
+// b) Declare "modoManutencao" atribuindo o valor invertido de "sistemaAtivo" (usando !).
+// c) Declare "lugarVago" com valor false.
+// d) Declare "lugarOcupado" com o valor invertido de "lugarVago" (usando !).
+// e) Exiba todas as 4 variáveis com template literal mostrando seus valores.
+
+// → Seu código aqui:
+/*
+//A
+
+let sistemaAtivo = true
+
+//B
+
+let modoManutencao = !sistemaAtivo
+
+//C
+
+let lugarVago = false
+
+//D
+
+let lugarOcupado = !lugarVago
+
+//E
+
+console.log(`Sistema ativo: ${sistemaAtivo}, Modo manutenção: ${modoManutencao}, Lugar Vago: ${lugarVago}, Lugar ocupado: ${lugarOcupado}`)
+
+*/
+console.log("_______________________________");
+
+
+
+// ------------------------------------------------------------
+// EXERCÍCIO 4 – Combinando && com operadores relacionais
+// ------------------------------------------------------------
+// a) Pergunte ao usuário seu peso e altura. Armazene os valores em um objeto.
+// b) Calcule o IMC: peso / (altura ** 2). Armazene em "imc" (dentro do objeto usuário).
+// c) Armazene em "imcAbaixoDoPeso" o resultado de: imc < 18.5
+// c) Armazene em "imcNormal" o resultado de: imc >= 18.5 && imc <= 24.9
+// d) Armazene em "imcAcimaDoPeso" o resultado de: imc >= 25 && imc <= 29.9
+// e) Exiba o IMC e os três resultados booleanos com template literal. Cada imc em um console.log() individual.
+
+// → Seu código aqui:
+
+/*
+//A
+let usuario = 
+{
+    peso : lerTeclado.questionFloat("Digite seu peso:"),
+    altura : lerTeclado.questionInt("Digite sua altura:")
+}
+//B
+
+usuario.imc = usuario.peso / (usuario.altura**2)
+console.log(usuario)
+
+//C
+
+let imcAbaixoDoPeso = usuario.imc < 18.5
+
+//C
+
+let imcNormal = usuario.imc >= 18.5 && imc <= 24.9
+
+//D
+
+let imcAcimaDoPeso = usuario.imc >= 25 && imc <= 29.9
+
+//F
+
+console.log(`Imc abaixo do peso: ${imcAbaixoDoPeso}`)
+console.log(`IMC normal: ${imcNormal}`)
+console.log(`IMC Acima do peso: ${imcAcimaDoPeso}`)
+
+*/
+console.log("_______________________________");
+
+
+// ------------------------------------------------------------
+// EXERCÍCIO 5 – Combinando || com operadores relacionais
+// ------------------------------------------------------------
+// a) Declare "notaFinal" com valor 4.8.
+// b) Armazene em "precisaRecuperacao" o resultado de:
+//    notaFinal >= 4 && notaFinal < 6
+// c) Armazene em "reprovado" o resultado de:
+//    notaFinal < 4
+// d) Armazene em "precisaDeAjuda" o resultado de:
+//    precisaRecuperacao || reprovado
+// e) Exiba todos os resultados com template literal.
+
+// → Seu código aqui:
+/*
+//A
+
+let notaFinal = 4.8
+
+//B
+
+let precisaRecuperacao = notaFinal >= 4 && notaFinal < 6
+
+//C
+
+let reprovado = notaFinal < 4
+
+//D
+
+let precisaDeAjuda = precisaRecuperacao || reprovado
+
+//F
+
+console.log(`Nota Final: ${notaFinal}, Precisa Recuperacao: ${precisaRecuperacao}, Reprovado: ${reprovado}, Precisa de ajuda: ${precisaDeAjuda}`)
+console.log("_______________________________");
+*/
+
+
+// ------------------------------------------------------------
+// EXERCÍCIO 6 – Operador ternário
+// ------------------------------------------------------------
+// a) Declare "temperatura" com valor 38.2.
+// b) Usando o operador ternário, armazene em "diagnostico":
+//    Se temperatura >= 37.6 → "Febre detectada"
+//    Caso contrário → "Temperatura normal"
+// c) Exiba a variável "diagnostico" com template literal mostrando a temperatura e o resultado do diagnóstico.
+
+// → Seu código aqui:
+/*
+//A
+
+let temperatura = 38.2
+
+//B
+
+let diagnostico = (temperatura >= 37.6 ? "Febre detectada" : "Temperatura normal")
+
+//C
+
+console.log(`Temperatura: ${temperatura} , Diagnostico: ${diagnostico}`)
+console.log("_______________________________");
+/*
+
+// ------------------------------------------------------------
+// EXERCÍCIO 7 – Operador ternário
+// ------------------------------------------------------------
+// a) Declare "velocidade" com valor 110 e "limiteVelocidade" com valor 100.
+// c) Usando o operador ternário, armazene em "statusMulta":
+//    Se velocidade > limiteVelocidade → "Multa aplicada"
+//    Caso contrário                    → "Velocidade regular"
+// c) Exiba a variável "statusMulta" com template literal mostrando a velocidade e o resultado da multa.
+
+// → Seu código aqui:
+/*
+//A
+
+let velocidade = 110
+let limiteVelocidade = 100
+
+//B
+
+let statusMulta = (velocidade > limiteVelocidade ? "Multa Aplicada" : "Velocidade Regular")
+
+//C
+
+console.log(`Status Multa: ${statusMulta}`)
+*/
+
+
+console.log("_______________________________");
+
+
+// ------------------------------------------------------------
+// EXERCÍCIO 8 – Operador ternário e questionamento
+// ------------------------------------------------------------
+// a) Pergunte ao usuário se ele é bolsista (keyInYN()). Armazene em "ehEstudante".
+// b) Pergunte ao usuário se ele paga mais que R$ 1000,00 mensais pelo curso.
+// b) Usando o operadores ternários, armazene em "mensagem":
+//    Se é bolsista e paga mais que R$ 1000,00 → "Desconto aplicado!"
+//    Caso contrário → "Desconto não aplicado."
+// c) Exiba a variável "mensagem" com template literal.
+
+// → Seu código aqui:
+/*
+//A
+
+let ehEstudante = lerTeclado.keyInYN("voce e bolsista?")
+
+//B
+
+let valor = lerTeclado.keyInYN("paga mais que 1000 reais pelo curso?")
+
+//B
+
+let mensagem = ehEstudante && valor ? "Desconto aplicado!" : "Desconto não aplicado."
+
+console.log("_______________________________");
+*/
+
+// ------------------------------------------------------------
+// EXERCÍCIO 9 – Verificação de acesso com input
+// ------------------------------------------------------------
+// a) Peça ao usuário e armazene os dados em um objeto:
+//    - Sua idade (questionInt()).
+//    - Se possui ingresso (keyInYN()).
+//    - Se é associado ao clube (keyInYN()).
+// b) Armazene e exiba os resultados das seguintes verificações em outro objeto:
+//    - "podeEntrarNormal": (idade maior ou igual a 18 e possuiIngresso) ou ehAssociado
+//    - "podeEntrarSocio": possuiIngresso e ehAssociado
+//    - "precisaAcompanhante": idade menor que 18
+//    - "naoPodeEntrar": não possuiIngresso e não ehAssociado
+// c) Exiba a mensagem final usando ternário:
+//    Se podeEntrarNormal ou podeEntrarSocio → "Entrada liberada!"
+//    Caso contrário → "Entrada negada."
+
+// → Seu código aqui:
+/*
+//A
+let socio =
+{
+    idade: lerTeclado.questionInt("Digite sua idade:"),
+    ingresso: lerTeclado.keyInYN("Possui ingresso?"),
+    ehAssociado: lerTeclado.keyInYN("Associado ao Clube?")
+}
+
+//B
+let entrada= 
+{
+    podeEntrarNormal:(socio.idade>=18 && socio.ingresso)|| socio.ehAssociado,
+    podeEntrarSocio:(socio.ingresso && socio.ehAssociado),
+    precisaAcompanhante:(socio.idade < 18),
+    naoPodeEntrar:(socio.ingresso&& !socio.ehAssociado)
+}
+console.log(entrada)
+
+//C
+
+let entrar = (entrada.podeEntrarNormal || entrada.podeEntrarSocio ? "Entrada liberada" : "Entrada negada")
+console.log(entrar)
+*/
+console.log("_______________________________");
+
+
+// ------------------------------------------------------------
+// EXERCÍCIO 10 – Verificação de estoque com objeto
+// ------------------------------------------------------------
+// a) Pergunte ao usuário:
+//    - Nome do produto.
+//    - Quantidade em estoque.
+//    - Se o produto está ativo no sistema (keyInYN()).
+// b) Armazene os dados em um objeto chamado "produto".
+// c) Crie as seguintes verificações booleanas:
+//    - "temEstoque": quantidade maior que 0
+//    - "produtoDisponivel": temEstoque e está ativo
+//    - "produtoIndisponivel": não temEstoque || não está ativo
+// d) Exiba os resultados com template literal.
+
+// → Seu código aqui:
+/*
+//A
+let produto = 
+{
+    nomeProduto : lerTeclado.question("Digite o nome do produto:"),
+    quantidadeEstoque : lerTeclado.questionInt("Digite a quantidade em estoque:"),
+    estaAtivoSistema :lerTeclado.keyInYN("Esta ativo no sistema?")
+}
+
+
+//C
+
+let temEstoque = (produto.quantidadeEstoque > 0 ? "Tem" : "Nao Tem")
+let produtoDisponivel = (produto.quantidadeEstoque && produto.estaAtivoSistema)
+let produtoIndisponivel  = (produto.quantidadeEstoque || produto.estaAtivoSistema ? "tem estoque" : "Nao tem estoque")
+
+//D
+
+console.log(`Tem o Produto em estoque: ${temEstoque}, Produto Disponivel: ${produtoDisponivel}, Produto Indisponivel: ${produtoIndisponivel} `)
+*/
+
+console.log("_______________________________");
+
+
+// ------------------------------------------------------------
+// EXERCÍCIO 11 – Verificação de permissões
+// ------------------------------------------------------------
+// a) Pergunte ao usuário:
+//    - Se ele é administrador (keyInYN())
+//    - Se ele está logado (keyInYN())
+//    - Se a conta está ativa (keyInYN())
+// b) Armazene as respostas em um objeto chamado "usuario".
+// c) Crie as seguintes verificações:
+//    - "acessoSistema": logado e contaAtiva
+//    - "acessoAdmin": acessoSistema e ehAdmin
+//    - "acessoNegado": não logado ou não contaAtiva
+// d) Exiba todos os resultados.
+
+// → Seu código aqui:
+/*
+let usuario = 
+{
+    ehAdmin : lerTeclado.keyInYN("é administrador?"),
+    logado : lerTeclado.keyInYN("esta logado?"),
+    contaAtiva : lerTeclado.keyInYN("conta esta ativa?")
+}
+
+//C
+let acessoSistema = (usuario.logado && usuario.contaAtiva)
+let acessoAdmin = (acessoSistema && usuario.ehAdmin)
+let acessoNegado = (usuario.logado ? "logado" : "nao logado" || usuario.contaAtiva ? "conta ativa": "nao ativa")
+
+//D
+
+console.log(acessoSistema)
+console.log(acessoAdmin)
+console.log(acessoNegado)
+*/
+
+console.log("_______________________________");
+
+
+// ------------------------------------------------------------
+// EXERCÍCIO 12 – Sistema simples de login
+// ------------------------------------------------------------
+// a) Crie um objeto "credenciaisSistema" contendo:
+//    usuario: "admin"
+//    senha: "1234"
+// b) Pergunte ao usuário:
+//    - usuário
+//    - senha
+// c) Crie as verificações:
+//    - "usuarioCorreto": usuarioDigitado estritamente igual a usuario
+//    - "senhaCorreta": senhaDigitada estritamente igual a senha
+//    - "loginValido": usuarioCorreto e senhaCorreta
+// d) Usando ternário, exiba:
+//    Se loginValido → "Login realizado com sucesso!"
+//    Caso contrário → "Usuário ou senha incorretos."
+
+// → Seu código aqui:
+
+//A
+
+let credenciaisSistema = 
+{
+    usuario : "admin",
+    senha: 1234,
+}
+
+//B
+
+let usuarioDigitado  = lerTeclado.question("digite o usuario:")
+let senhaDigitada = lerTeclado.questionInt("digite a senha:")
+
+//C
+
+let usuarioCorreto = (usuarioDigitado === credenciaisSistema.usuario)
+let senhaCorreta = (senhaDigitada === credenciaisSistema.senha)
+let loginValido = (usuarioCorreto && senhaCorreta)
+
+//D
+console.log(loginValido ? "Login realizado com sucesso!" : "Usuario ou senha incorretos")
+
+console.log("_______________________________")
