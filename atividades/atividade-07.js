@@ -44,7 +44,6 @@ console.log("_______________________________");
 // d) Senão, exiba: "Boa noite!"
 
 // → Seu código aqui:
-
 let hora = 14
 if(hora < 12){
     console.log("Bom dia!")
@@ -55,6 +54,7 @@ else if(hora < 18){
 else {
     console.log("Boa noite")
 }
+
 console.log("_______________________________");
 
 
@@ -67,7 +67,7 @@ console.log("_______________________________");
 //    Senão, exiba: "Jovem".
 
 // → Seu código aqui:
-/*
+
 let idadeUsuário = lerTeclado.questionInt("Digite sua idade:")
 
 if(idadeUsuário >= 18){
@@ -79,7 +79,7 @@ else if(idadeUsuário < 12){
 else{
     console.log("Jovem")
 }
-*/
+
 console.log("_______________________________");
 
 
@@ -128,7 +128,7 @@ console.log("_______________________________");
 //    - temperatura > 35           → "Muito quente"
 
 // → Seu código aqui:
-/*
+
 let temperatura = lerTeclado.questionFloat("Qual a temperatura?")
 if(temperatura < 10){
     console.log("Muito frio")
@@ -145,7 +145,7 @@ else if(temperatura > 25 && temperatura <= 35){
 else if(temperatura > 35){
     console.log("Quente")
 }
-*/
+
 console.log("_______________________________");
 
 
@@ -163,7 +163,7 @@ console.log("_______________________________");
 //      - caso contrário → "Entrada inteira."
 
 // → Seu código aqui:
-/*
+
 let entrada = {
     nome: lerTeclado.question("Digite seu nome:"),
     possuiIngresso:lerTeclado.keyInYN("Possui ingresso?"),
@@ -184,7 +184,7 @@ else if(entrada.idade >= 60){
 else{
     console.log("Entrada inteira")
 }
-*/ 
+
 
 console.log("_______________________________");
 
@@ -202,7 +202,7 @@ console.log("_______________________________");
 //    - Senão          → exiba: "<nome>, você não atende aos requisitos."
 
 // → Seu código aqui:
-/*
+
 let motorista = {
     nome:lerTeclado.question("Digite seu nome:"),
     idade:lerTeclado.questionInt("Digite sua idade:"),
@@ -214,7 +214,7 @@ if(motorista.idade >= 21 && motorista.habilitacao){
 }else{
     console.log(motorista.idade,  "Você não pode alugar um carro.")
 }
-*/
+
 console.log("_______________________________");
 
 
@@ -226,7 +226,7 @@ console.log("_______________________________");
 //    - Se é idoso, com 60 anos ou mais.
 // b) Se é estudante OU idoso → exiba: "Desconto de 50% aplicado!"
 //    Senão → exiba: "Sem desconto. Preço cheio."
-/*
+
 // → Seu código aqui:
 let usuario = lerTeclado.keyInYN("Eh estudante?")  
 let idoso= lerTeclado.keyInYN("Eh idoso com 60 anos ou mais?")
@@ -236,7 +236,7 @@ if(usuario || idoso){
 }else{
     console.log("Sem desconto. Preco cheio")
 }
-*/
+
 console.log("_______________________________");
 
 
@@ -260,8 +260,9 @@ console.log("_______________________________");
 
 const aluno = {
     nome:lerTeclado.question("Digite seu nome:"),
-    nota1:lerTeclado.questionFloat("Digite a nota da primeira prova:"),
-    nota2:lerTeclado.questionFloat("Digite a nota da segunda prova:"),
+    nota1:lerTeclado.questionInt("Digite a nota da primeira prova:"),
+    nota2:lerTeclado.questionInt("Digite a nota da segunda prova:"),
+    situacao : ""
 }
 let media = (aluno.nota1 + aluno.nota2)/2
 
@@ -269,15 +270,15 @@ aluno.media = media
 console.log(aluno)
 
 if(aluno.media >=7){
-    console.log("Aprovado")
+    aluno.situacao = "Aprovado"
 }else if(aluno.media >= 5){
-    console.log("Em recuperacão")
+    aluno.situacao = "Em recuperacão"
 }else{
-    console.log("Reprovado")
+    aluno.situacao = "Reprovado"
 }
 
 console.table(aluno)
-console.table(`${aluno.nome},situação:${aluno.media}`)
+console.table(`${aluno.nome},situação:${aluno.situacao}`)
 
 
 console.log("_______________________________");
@@ -303,4 +304,35 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+let calculo = {
+    numeroA: lerTeclado.questionFloat("Digite um numero:"),
+    numeroB: lerTeclado.questionFloat("Digite um numero:"),
+    operacao:  lerTeclado.questionInt("1-soma | 2-subtracao | 3-multipicacao | 4-divisao:"),
+    simbolo : "",
+    resultado: ""
+}
+
+if(calculo.operacao === 1){
+    calculo.simbolo = "+"
+    calculo.resultado = calculo.numeroA + calculo.numeroB
+  
+}else if(calculo.operacao === 2){
+    calculo.simbolo = "-"
+    calculo.resultado = calculo.numeroA - calculo.numeroB
+   
+
+}else if(calculo.operacao === 3){
+    calculo.simbolo = "*"
+    calculo.resultado = calculo.numeroA * calculo.numeroB
+    
+
+}else if(calculo.operacao === 4){
+    if(calculo.numeroB === 0){
+        console.log("erro");
+    }else{
+    calculo.resultado = calculo.numeroA / calculo.numeroB
+    }
+
+}
+console.log(`${calculo.numeroA}${calculo.simbolo}${calculo.numeroB} = ${calculo.resultado}`)
 console.log("_______________________________");
