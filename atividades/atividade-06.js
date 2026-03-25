@@ -28,7 +28,7 @@ let lerTeclado = require('readline-sync');
 //   d) false && false
 
 // → Seu código aqui:
-/*
+
 //A
 
 console.log(true && true)
@@ -44,7 +44,7 @@ console.log(false && true)
 //D
 
 console.log(false && false)
-*/
+
 
 console.log("_______________________________");
 
@@ -63,7 +63,7 @@ console.log("_______________________________");
 //   d) false || false
 
 // → Seu código aqui:
-/*
+
 //A
 
 console.log(true || true)
@@ -79,7 +79,7 @@ console.log(false ||  true)
 //D
 
 console.log(false || false)
-*/
+
 
 console.log("_______________________________");
 
@@ -114,10 +114,9 @@ let lugarOcupado = !lugarVago
 //E
 
 console.log(`Sistema ativo: ${sistemaAtivo}, Modo manutenção: ${modoManutencao}, Lugar Vago: ${lugarVago}, Lugar ocupado: ${lugarOcupado}`)
-
 */
-console.log("_______________________________");
 
+console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -158,11 +157,12 @@ let imcAcimaDoPeso = usuario.imc >= 25 && imc <= 29.9
 
 //F
 
+
 console.log(`Imc abaixo do peso: ${imcAbaixoDoPeso}`)
 console.log(`IMC normal: ${imcNormal}`)
 console.log(`IMC Acima do peso: ${imcAcimaDoPeso}`)
-
 */
+
 console.log("_______________________________");
 
 
@@ -179,7 +179,7 @@ console.log("_______________________________");
 // e) Exiba todos os resultados com template literal.
 
 // → Seu código aqui:
-/*
+
 //A
 
 let notaFinal = 4.8
@@ -200,7 +200,7 @@ let precisaDeAjuda = precisaRecuperacao || reprovado
 
 console.log(`Nota Final: ${notaFinal}, Precisa Recuperacao: ${precisaRecuperacao}, Reprovado: ${reprovado}, Precisa de ajuda: ${precisaDeAjuda}`)
 console.log("_______________________________");
-*/
+
 
 
 // ------------------------------------------------------------
@@ -213,7 +213,7 @@ console.log("_______________________________");
 // c) Exiba a variável "diagnostico" com template literal mostrando a temperatura e o resultado do diagnóstico.
 
 // → Seu código aqui:
-/*
+
 //A
 
 let temperatura = 38.2
@@ -226,7 +226,7 @@ let diagnostico = (temperatura >= 37.6 ? "Febre detectada" : "Temperatura normal
 
 console.log(`Temperatura: ${temperatura} , Diagnostico: ${diagnostico}`)
 console.log("_______________________________");
-/*
+
 
 // ------------------------------------------------------------
 // EXERCÍCIO 7 – Operador ternário
@@ -238,7 +238,7 @@ console.log("_______________________________");
 // c) Exiba a variável "statusMulta" com template literal mostrando a velocidade e o resultado da multa.
 
 // → Seu código aqui:
-/*
+
 //A
 
 let velocidade = 110
@@ -251,7 +251,7 @@ let statusMulta = (velocidade > limiteVelocidade ? "Multa Aplicada" : "Velocidad
 //C
 
 console.log(`Status Multa: ${statusMulta}`)
-*/
+
 
 
 console.log("_______________________________");
@@ -268,7 +268,7 @@ console.log("_______________________________");
 // c) Exiba a variável "mensagem" com template literal.
 
 // → Seu código aqui:
-/*
+
 //A
 
 let ehEstudante = lerTeclado.keyInYN("voce e bolsista?")
@@ -282,7 +282,7 @@ let valor = lerTeclado.keyInYN("paga mais que 1000 reais pelo curso?")
 let mensagem = ehEstudante && valor ? "Desconto aplicado!" : "Desconto não aplicado."
 
 console.log("_______________________________");
-*/
+
 
 // ------------------------------------------------------------
 // EXERCÍCIO 9 – Verificação de acesso com input
@@ -301,30 +301,8 @@ console.log("_______________________________");
 //    Caso contrário → "Entrada negada."
 
 // → Seu código aqui:
-/*
-//A
-let socio =
-{
-    idade: lerTeclado.questionInt("Digite sua idade:"),
-    ingresso: lerTeclado.keyInYN("Possui ingresso?"),
-    ehAssociado: lerTeclado.keyInYN("Associado ao Clube?")
-}
 
-//B
-let entrada= 
-{
-    podeEntrarNormal:(socio.idade>=18 && socio.ingresso)|| socio.ehAssociado,
-    podeEntrarSocio:(socio.ingresso && socio.ehAssociado),
-    precisaAcompanhante:(socio.idade < 18),
-    naoPodeEntrar:(socio.ingresso&& !socio.ehAssociado)
-}
-console.log(entrada)
 
-//C
-
-let entrar = (entrada.podeEntrarNormal || entrada.podeEntrarSocio ? "Entrada liberada" : "Entrada negada")
-console.log(entrar)
-*/
 console.log("_______________________________");
 
 
@@ -343,26 +321,23 @@ console.log("_______________________________");
 // d) Exiba os resultados com template literal.
 
 // → Seu código aqui:
-/*
-//A
-let produto = 
-{
-    nomeProduto : lerTeclado.question("Digite o nome do produto:"),
-    quantidadeEstoque : lerTeclado.questionInt("Digite a quantidade em estoque:"),
-    estaAtivoSistema :lerTeclado.keyInYN("Esta ativo no sistema?")
-}
 
+let produto =
+{
+    nomeProduto: lerTeclado.question("Digite o nome do produto:"),
+    quantidadeEstoque: lerTeclado.questionInt("Quantidade em estoque:"),
+    estaAtivoSistema: lerTeclado.keyInYN("Esta ativo no sistema?")
+}
 
 //C
 
-let temEstoque = (produto.quantidadeEstoque > 0 ? "Tem" : "Nao Tem")
-let produtoDisponivel = (produto.quantidadeEstoque && produto.estaAtivoSistema)
-let produtoIndisponivel  = (produto.quantidadeEstoque || produto.estaAtivoSistema ? "tem estoque" : "Nao tem estoque")
+let temEstoque = produto.quantidadeEstoque > 0
 
-//D
 
-console.log(`Tem o Produto em estoque: ${temEstoque}, Produto Disponivel: ${produtoDisponivel}, Produto Indisponivel: ${produtoIndisponivel} `)
-*/
+
+
+
+
 
 console.log("_______________________________");
 
@@ -382,25 +357,7 @@ console.log("_______________________________");
 // d) Exiba todos os resultados.
 
 // → Seu código aqui:
-/*
-let usuario = 
-{
-    ehAdmin : lerTeclado.keyInYN("é administrador?"),
-    logado : lerTeclado.keyInYN("esta logado?"),
-    contaAtiva : lerTeclado.keyInYN("conta esta ativa?")
-}
 
-//C
-let acessoSistema = (usuario.logado && usuario.contaAtiva)
-let acessoAdmin = (acessoSistema && usuario.ehAdmin)
-let acessoNegado = (usuario.logado ? "logado" : "nao logado" || usuario.contaAtiva ? "conta ativa": "nao ativa")
-
-//D
-
-console.log(acessoSistema)
-console.log(acessoAdmin)
-console.log(acessoNegado)
-*/
 
 console.log("_______________________________");
 
@@ -424,26 +381,5 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-//A
 
-let credenciaisSistema = 
-{
-    usuario : "admin",
-    senha: 1234,
-}
-
-//B
-
-let usuarioDigitado  = lerTeclado.question("digite o usuario:")
-let senhaDigitada = lerTeclado.questionInt("digite a senha:")
-
-//C
-
-let usuarioCorreto = (usuarioDigitado === credenciaisSistema.usuario)
-let senhaCorreta = (senhaDigitada === credenciaisSistema.senha)
-let loginValido = (usuarioCorreto && senhaCorreta)
-
-//D
-console.log(loginValido ? "Login realizado com sucesso!" : "Usuario ou senha incorretos")
-
-console.log("_______________________________")
+console.log("_______________________________");
