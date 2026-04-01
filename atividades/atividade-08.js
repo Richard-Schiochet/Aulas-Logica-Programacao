@@ -162,10 +162,11 @@ console.log("_______________________________");
 //    - default     → "Estação não reconhecida."
 
 // → Seu código aqui:
-let estacao = lerTeclado.question("verao", "outono", "inverno", "primavera:")
+/*
+let estacao = lerTeclado.question( "verao, outono, inverno, primavera:")
 switch(estacao){
     case "verao":
-        console.log("Dias quentes e férias!")
+        console.log("Dias quentes e férias!") 
         break;
     case "outono":
         console.log("Folhas caindo e temperaturas amenas.")
@@ -179,7 +180,7 @@ switch(estacao){
     default:
     console.log("Estação não reconhecida.")
 }
-
+*/
 console.log("_______________________________");
 
 
@@ -194,7 +195,25 @@ console.log("_______________________________");
 // 
 
 // → Seu código aqui:
+/*
+let numero = lerTeclado.questionInt("Digite um numero de 1 a 7:")
 
+switch(numero){
+        case 1:
+        case 2:
+        case 3: 
+        case 4:
+        case 5:
+        console.log("Dia util")
+        break;
+        case 6:
+        case 7:
+        console.log("Final de Semana")
+        break;
+        default:
+        console.log("Numero Invalido")
+}
+*/
 
 console.log("_______________________________");
 
@@ -215,8 +234,37 @@ console.log("_______________________________");
 // c) Exiba o objeto com console.table().
 
 // → Seu código aqui:
-
-
+/*
+let produto = {
+    nome: lerTeclado.question("Digite nome do produto:"),
+    categoria:lerTeclado.questionInt("1-Eletronico, 2-Vestuario, 3–Alimento, 4–Livro:"),
+    preco:lerTeclado.questionFloat("Qual o preco?"),
+    descricaoCategoria: null,
+    garantia:null
+}
+switch(produto.categoria){ 
+    case 1: 
+        produto.descricaoCategoria = "Eletronico"
+        produto.garantia = "12 meses"
+        break;
+    case 2: 
+        produto.descricaoCategoria = "Vestuario"
+        produto.garantia = "30 dias para Troca"
+        break;
+    case 3: 
+        produto.descricaoCategoria = "Alimento"
+        produto.garantia = "Ver validade"
+        break;
+    case 4: 
+        produto.descricaoCategoria = "Livro"
+        produto.garantia = "Sem Garantia"
+        break;
+    default:
+        produto.categoria = "Opcao Invalida"
+        produto.garantia = "Opcao Invalida"
+}
+console.table(produto)
+*/
 console.log("_______________________________");
 
 
@@ -237,7 +285,46 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+/*
+let usuario ={
+    nome:lerTeclado.question("Digite seu nome:"),
+    nota:lerTeclado.questionInt("Nota de 0 a 10:"),
+    conceito: null,
+    mensagem:null
+}
+switch(usuario.nota){
+    case 10:
+    case 9:
+        usuario.conceito = "A"
+        usuário.mensagem = "Excelente!"
+        break;
+    case 8:
+    case 7:
+        usuario.conceito = "B"
+        usuario.mensagem = "Muito Bom!"
+        break;
+    case 6:
+    case 5:
+        usuario.conceito = "C"
+        usuario.mensagem = "Suficiente."
+        break;
+    case 4:
+    case 3:
+        usuario.conceito = "D"
+        usuario.mensagem = "Em Recuperacao."
+        break;
+    case 2:
+    case 1:
+        usuario.conceito = "F"
+        usuario.mensagem = "Reprovado."
+        break;
+    default:
+        usuario.conceito = "Nota Invalida"
+        usuario.mensagem = "Nota invalida"
+}
 
+console.log(`${usuario.nome} - nota:${usuario.nota} | conceito: ${usuario.conceito} | mensagem: ${usuario.mensagem}`)
+*/
 console.log("_______________________________");
 
 
@@ -255,8 +342,46 @@ console.log("_______________________________");
 //    No default, exiba: "Operação inválida."
 
 // → Seu código aqui:
+/*
+let numeroA= lerTeclado.questionFloat("Digite um numero:")
+let numeroB = lerTeclado.questionFloat("Digite um numero:")
 
+console.log("1 – Soma | 2 – Subtração | 3 – Multiplicação | 4 – Divisão | 5 – Resto")
 
+let operacao = lerTeclado.questionFloat("Escolha uma operacao:")
+let resultado = null
+let simbolo  = null
+
+switch(operacao){
+    case 1:
+        simbolo = "+"
+        resultado = numeroA + numeroB
+        break;
+    case 2:
+        simbolo = "-"
+        resultado = numeroA - numeroB
+        break;
+     case 3:
+        simbolo = "*"
+        resultado = numeroA * numeroB
+        break;
+    case 4:
+        simbolo = "/"
+        resultado = numeroA / numeroB
+        if(operacao === 4 && numeroA | numeroB === 0){
+            console.log(" Erro: divisão por zero não é permitida.")
+            }
+        break;
+    case 5:
+        simbolo = "%"
+        resultado = numeroA % numeroB
+        break;
+    default:
+        console.log("Operacao Invalida")
+    }
+    
+    console.log(resultado)
+*/
 console.log("_______________________________");
 
 
@@ -279,5 +404,64 @@ console.log("_______________________________");
 //    - default → exiba: "Opção inválida."
 
 // → Seu código aqui:
+/*
+let loja ={
+    nome: "TechShop",
+    saldo: 0,
+    preco: null
 
-console.log("_______________________________");
+}
+  
+console.log("MENU")
+console.log("1 – Ver produtos | 2 – Comprar | 3 – Ver carrinho | 4 – Sair")
+let opcao = lerTeclado.questionInt("Digite uma opcao:")
+
+switch(loja){
+    case 1 : 
+*/ 
+       
+
+
+
+
+let loja = {
+    nome: "TechShop",
+    saldo: 0
+}
+
+
+console.log("=== MENU ===");
+console.log("1 – Ver produtos");
+console.log("2 – Comprar");
+console.log("3 – Ver carrinho");
+console.log("4 – Sair");
+
+
+let opcao = lerTeclado.questionInt("Escolha uma opcao: ");
+
+
+switch (opcao) {
+    case 1:
+        let produtos = [
+            { produto: "Mouse", preco: 89.90 },
+            { produto: "Teclado", preco: 149.90 },
+            { produto: "Headset", preco: 199.90 }
+        ];
+        console.table(produtos);
+        break;
+    case 2:
+        let nomeProduto = lerTeclado.question("Digite o nome do produto: ");
+        let precoProduto = lerTeclado.questionFloat("Digite o preco: ");
+        
+        loja.saldo += precoProduto;
+        console.log("Produto adicionado ao carrinho.");
+        break;
+    case 3:
+        console.log(`Total no carrinho: R$ ${loja.saldo}`);
+        break;
+    case 4:
+        console.log("Obrigado por visitar a TechShop!");
+        break;
+    default:
+        console.log("Opção inválida.");
+}
